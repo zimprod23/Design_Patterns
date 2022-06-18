@@ -19,7 +19,7 @@ public abstract class HostingServiceTP implements Subscribe{
     public List<IncludingServices> Services() {
         return services;
     }
-
+  // ---> Hilight
     public Float OtherServicesPrice(){
        if(sb != null){
            return sb.getTotal();
@@ -27,9 +27,10 @@ public abstract class HostingServiceTP implements Subscribe{
         return null;
        }
     }
+    //--------------------
 
     public HostingServiceTP setIncludingServices(ServiceBuilder sbb){
-        this.sb = sbb;
+       this.sb = sbb;
        services = sb.getServices();
        return this;
     }

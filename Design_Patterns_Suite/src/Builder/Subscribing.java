@@ -11,11 +11,13 @@ public class Subscribing {
     public Subscribing(HostingServiceTP subscribes,ServiceBuilder sb){
          serviceBuilder = sb;
          subs.add(subscribes.setIncludingServices(serviceBuilder));
+         for(String Sname : serviceBuilder.ServicesNames)
+            System.out.print(Sname);
     }
 
-    public void AddSub(HostingServiceTP e){
-       this.subs.add(e.setIncludingServices(serviceBuilder));
-    }
+    // public void AddSub(HostingServiceTP e){
+    //    this.subs.add(e.setIncludingServices(serviceBuilder));
+    // }
 
     public Float GetTotalCost(){
         for(Subscribe s:subs){

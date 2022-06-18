@@ -3,8 +3,8 @@ import java.util.*;;
 
 public class ServiceBuilder {
      private List<IncludingServices> including = new ArrayList<IncludingServices>();
-     public static Float TotalPrice=0.0f;
-     public static String[] ServicesNames;
+     public  Float TotalPrice=0.0f;
+     public  String[] ServicesNames;
      public ServiceBuilder(IncludingServices... services){
             for(IncludingServices inc : services){
                 this.including.add(inc);
