@@ -6,6 +6,7 @@ public class Journalization_sg{
 
     private static final Journalization_sg sg;
     private String[] Logs = {"Accepted","Denied"};
+    public static int holder = 0;
     static{
         sg = new Journalization_sg();
     }
@@ -23,14 +24,14 @@ public class Journalization_sg{
 
     public void Ops(Account account){
         try{
-            Thread.sleep(5000);
+            Thread.sleep(3500);
         }catch(InterruptedException e){
             e.printStackTrace();
         }
-        if(account.Verfy()){
-            System.out.println("The auth of Mr/Ms :"+account.getName() +" | "+Logs[0]);
+        if(account.Trigger){
+            System.out.println(" The auth of Mr/Ms :"+account.getName() +" | "+Logs[0]);
         }else{
-            System.out.println("The auth of Mr/Ms :"+account.getName() + " | "+Logs[1]);
+            System.out.println(" The auth of Mr/Ms :"+account.getName() + " | "+Logs[1]);
         }
         }
 

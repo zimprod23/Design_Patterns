@@ -3,7 +3,7 @@ package  BankAccount;
 public class ThreadedJr extends Thread{
     public Account acc;
     public ThreadedJr(Account acc){
-           this.acc = new Account(acc);
+           this.acc = acc;
     }
     @Override
     public void run() {
